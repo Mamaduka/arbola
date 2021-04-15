@@ -1,20 +1,20 @@
 (function () {
-	const HEIGHT = 192;
+	const HEIGHT = 96;
 	const ZERO = 0;
 	const SIDES = [ 'top', 'right', 'bottom', 'left' ];
 	let currentSide = SIDES[ Math.floor( Math.random() * SIDES.length ) ];
 	let isAroblaMoving = true;
 
 	const container = document.querySelector('.container');
-	const arbola = jQuery('.arbola');
-	const arbolaImg = arbola.find('img');
+	const arbola = document.querySelector('.arbola');
+	const arbolaImg = arbola.querySelector('img');
 
-	arbola.addClass(currentSide);
+	arbola.classList.add(currentSide);
 
-	arbola.animate( { bottom: 0 }, 800, function() {
-		jQuery('.container').on('touchstart mousemove', function() {
+	Velocity( arbola, { bottom: 0 }, 800, function() {
+		container.addEventListener('mousemove', function() {
 			moveArbola();
-		});
+		} );
 	});
 
 	function moveArbola() {
@@ -36,27 +36,27 @@
 			[ newSide ]: ZERO,
 		};
 
-		arbola.animate( moveOut, 800, function() {
-			arbola.removeAttr( 'style' );
-			arbolaImg.removeAttr( 'style' );
-			arbola.removeClass( currentSide );
-			arbola.addClass( newSide );
+		Velocity( arbola, moveOut, 800, function() {
+			arbola.setAttribute( 'style', '' );
+			arbolaImg.setAttribute( 'style', '' );
+			arbola.classList.remove( currentSide );
+			arbola.classList.add( newSide );
 
 			const newPosition = Math.floor( Math.random() * ( ( 90 - 10 ) + 1 ) + 10 );
 
 			switch ( newSide ) {
 				case 'left':
 				case 'right':
-					arbolaImg.css({ 'top': newPosition + '%' });
+					arbolaImg.style.top = newPosition + '%';
 					break;
 				case 'top':
 				case 'bottom':
-					arbolaImg.css({ 'left': newPosition + '%' });
+					arbolaImg.style.left = newPosition + '%';
 					break;
 			}
 		} );
 
-		arbola.animate( moveIn, 800, function() {
+		Velocity( arbola, moveIn, 800, function() {
 			// Get that girl moving.
 			isAroblaMoving = true;
 

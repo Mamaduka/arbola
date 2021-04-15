@@ -24,9 +24,9 @@ h1 {
 	position: absolute;
 	top: auto;
 	right: auto;
-	bottom: -192px;
+	bottom: -96px;
 	left: 0;
-	height: 192px;
+	height: 96px;
 	width: 100%;
 }
 
@@ -37,20 +37,20 @@ h1 {
 }
 
 .arbola.top {
-	top: -192px;
+	top: -96px;
 	right: auto;
 	bottom: auto;
 	left: 0;
-	height: 192px;
+	height: 96px;
 	width: 100%;
 }
 
 .arbola.bottom {
 	top: auto;
 	right: auto;
-	bottom: -192px;
+	bottom: -96px;
 	left: 0;
-	height: 192px;
+	height: 96px;
 	width: 100%;
 }
 
@@ -58,17 +58,17 @@ h1 {
 	top: 0;
 	right: auto;
 	bottom: auto;
-	left: -192px;
+	left: -96px;
 	height: 100%;
-	width: 192px;
+	width: 96px;
 }
 .arbola.right {
 	top: 0;
-	right: -192px;
+	right: -96px;
 	bottom: auto;
 	left: auto;
 	height: 100%;
-	width: 192px;
+	width: 96px;
 }
 
 .arbola.top img {
