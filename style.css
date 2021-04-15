@@ -21,7 +21,8 @@ h1 {
 	align-items: center;
 	justify-content: center;
 	width: 100vw;
-	height: 90vh;
+	min-height: 100vh;
+	height: -webkit-fill-available;
 	position: relative;
 	overflow: hidden;
 }
