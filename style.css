@@ -18,6 +18,8 @@ h1 {
 	height: 100vh;
 	position: relative;
 	overflow: hidden;
+	/* mobile viewport bug fix */
+	min-height: -webkit-fill-available
 }
 
 .arbola {
