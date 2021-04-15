@@ -1,0 +1,90 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
+h1 {
+	color: hotpink;
+	font-family: "Comic Sans MS", "Comic Sans", cursive;
+	font-size: 120px;
+	margin: 0 20px;
+}
+
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100vw;
+	height: 100vh;
+	position: relative;
+	overflow: hidden;
+}
+
+.arbola {
+	position: absolute;
+	top: auto;
+	right: auto;
+	bottom: -192px;
+	left: 0;
+	height: 192px;
+	width: 100%;
+}
+
+.arbola img {
+	position: absolute;
+	top: 0;
+	left: 50%;
+}
+
+.arbola.top {
+	top: -192px;
+	right: auto;
+	bottom: auto;
+	left: 0;
+	height: 192px;
+	width: 100%;
+}
+
+.arbola.bottom {
+	top: auto;
+	right: auto;
+	bottom: -192px;
+	left: 0;
+	height: 192px;
+	width: 100%;
+}
+
+.arbola.left {
+	top: 0;
+	right: auto;
+	bottom: auto;
+	left: -192px;
+	height: 100%;
+	width: 192px;
+}
+.arbola.right {
+	top: 0;
+	right: -192px;
+	bottom: auto;
+	left: auto;
+	height: 100%;
+	width: 192px;
+}
+
+.arbola.top img {
+	transform: rotate(180deg) translate(50%, 0);
+}
+
+.arbola.right img {
+	left: 0;
+	transform-origin: left top;
+	transform: rotate( -90deg) translate(-50%, 0);
+}
+
+.arbola.left img {
+	top: 50%;
+	left: auto;
+	right: 0;
+	transform-origin: right top;
+	transform: rotate(90deg) translate(50%, 0);
+}
