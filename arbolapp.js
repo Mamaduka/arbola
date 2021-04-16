@@ -11,7 +11,7 @@
 
 	arbola.classList.add(currentSide);
 
-	Velocity( arbola, { bottom: 0 }, 800, function() {
+	Velocity( arbola, { [ currentSide ]: ZERO }, 800, function() {
 		container.addEventListener('mousemove', function() {
 			moveArbola();
 		} );
